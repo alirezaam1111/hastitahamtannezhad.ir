@@ -3,148 +3,139 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#100d25">
-<title>LOVE QUEST — مأموریت قلب من</title>
+<meta name="theme-color" content="#10091f">
+<title>NEZUKO LOVE QUEST 💗</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
-:root{--pink:#ff5ca8;--pink2:#ff9bd0;--cyan:#5cf3e5;--blue:#70baff;--violet:#a98aff;--ink:#f9efff;--muted:#c2b6d9;--panel:rgba(26,20,53,.72);--line:rgba(190,164,255,.22)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:#0b0918;color:var(--ink);font-family:Vazirmatn,Tahoma,sans-serif;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(ellipse at 18% 18%,#59245c88,transparent 35%),radial-gradient(ellipse at 82% 12%,#075d6480,transparent 35%),radial-gradient(ellipse at 50% 90%,#29205d,transparent 45%),linear-gradient(135deg,#090817,#12112b 55%,#080d1d)}
-#stars{position:fixed;inset:0;z-index:-2;pointer-events:none;background-image:radial-gradient(2px 2px at 20px 30px,#fff9,transparent),radial-gradient(1px 1px at 90px 80px,#7df9f0aa,transparent),radial-gradient(2px 2px at 160px 140px,#ff8acaaa,transparent);background-size:220px 190px;animation:stars 35s linear infinite}
+:root{--pink:#ff4fa3;--rose:#ff9dca;--cyan:#59f4e5;--blue:#71baff;--violet:#a98aff;--gold:#ffe08a;--ink:#fff3fc;--muted:#c8badc;--line:#d9baff35}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:#090817;color:var(--ink);font-family:Vazirmatn,Tahoma,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-4;background:radial-gradient(ellipse at 15% 12%,#69285c99,transparent 34%),radial-gradient(ellipse at 90% 18%,#086c7190,transparent 36%),radial-gradient(ellipse at 55% 100%,#34216e,transparent 48%),linear-gradient(140deg,#090817,#11132d 55%,#080d1d)}
+#stars{position:fixed;inset:0;z-index:-3;pointer-events:none;background-image:radial-gradient(2px 2px at 20px 30px,#fff9,transparent),radial-gradient(1px 1px at 90px 80px,#7df9f0aa,transparent),radial-gradient(2px 2px at 160px 140px,#ff8acaaa,transparent);background-size:220px 190px;animation:stars 35s linear infinite}
 @keyframes stars{to{background-position:220px 380px}}
-.scan{position:fixed;inset:0;pointer-events:none;z-index:8;opacity:.12;background:repeating-linear-gradient(0deg,transparent 0 3px,#fff 4px,transparent 5px)}
-.nebula{position:fixed;width:38vw;height:38vw;min-width:250px;min-height:250px;border-radius:50%;filter:blur(85px);opacity:.17;pointer-events:none;z-index:-1;animation:nebula 14s ease-in-out infinite alternate}
-.n1{background:#ff3c9d;left:-12vw;top:20vh}.n2{background:#00e6d4;right:-12vw;bottom:0;animation-delay:-6s}
-@keyframes nebula{to{transform:translate(8vw,-5vh) scale(1.25)}}
-button{font:inherit;cursor:pointer;color:inherit}.shell{width:min(1060px,100%);margin:auto;padding:22px 18px 60px}
-.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:4px 0 24px}
-.logo{font-weight:900;letter-spacing:2px;font-size:1rem;color:#fff;text-shadow:0 0 18px #ff5ca8}
-.logo b{color:var(--cyan)}.status{font-size:.78rem;color:var(--cyan);border:1px solid #5cf3e555;border-radius:99px;padding:7px 12px;background:#5cf3e510}
-.hero,.panel{background:linear-gradient(145deg,rgba(37,27,70,.82),rgba(12,23,48,.78));border:1px solid var(--line);border-radius:28px;box-shadow:0 25px 90px #0007,inset 0 1px #ffffff10;backdrop-filter:blur(18px)}
-.hero{padding:clamp(24px,5vw,56px);text-align:center;position:relative;overflow:hidden}
-.hero:before{content:"";position:absolute;inset:-2px;background:conic-gradient(from 0deg,transparent,#ff5ca855,transparent,#5cf3e555,transparent);filter:blur(25px);opacity:.4;z-index:-1}
-.eyebrow{color:var(--cyan);font-size:.78rem;letter-spacing:3px;font-weight:700}
-h1{font-size:clamp(2.6rem,8vw,5.8rem);line-height:1.15;margin:16px 0 10px;font-weight:900;background:linear-gradient(100deg,#fff 5%,#ff9bd0 42%,#5cf3e5 90%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 24px #f65aa955)}
-.lead{color:var(--muted);line-height:2;max-width:610px;margin:0 auto 25px}
-.orbit{width:180px;height:180px;margin:22px auto 26px;position:relative;display:grid;place-items:center}
-.orbit:before,.orbit:after{content:"";position:absolute;inset:8px;border:1px solid #ff8bc877;border-radius:50%;box-shadow:0 0 25px #ff5ca855,inset 0 0 20px #5cf3e522;animation:spin 12s linear infinite}
-.orbit:after{inset:25px;border-color:#5cf3e599;transform:rotateX(65deg);animation-duration:8s}
-@keyframes spin{to{transform:rotate(360deg)}}
-.core{width:94px;height:94px;border-radius:28px;transform:rotate(45deg);background:linear-gradient(135deg,#ff5ca8,#a879ff 55%,#5cf3e5);box-shadow:0 0 35px #ff5ca899,0 0 85px #5cf3e544;display:grid;place-items:center;animation:pulse 2s infinite}
-.core span{transform:rotate(-45deg);font-size:43px;filter:drop-shadow(0 3px 10px #6b155b)}
-@keyframes pulse{50%{scale:1.1;box-shadow:0 0 55px #ff5ca8,0 0 110px #5cf3e566}}
-.btn{border:1px solid #ffffff25;border-radius:14px;padding:13px 22px;font-weight:800;transition:.2s;display:inline-flex;align-items:center;justify-content:center;gap:9px}
-.btn:hover{transform:translateY(-3px);filter:brightness(1.12)}
-.primary{background:linear-gradient(100deg,#ff4e9c,#9b6cff 55%,#35dcca);box-shadow:0 10px 30px #c4479d44;color:#fff}
-.ghost{background:#ffffff0b;color:var(--muted)}
-.mini-note{font-size:.76rem;color:#9689ad;margin-top:15px}
-.hidden{display:none!important}.screen{animation:enter .55s both}@keyframes enter{from{opacity:0;transform:translateY(15px) scale(.99)}to{opacity:1;transform:none}}
-.panel{padding:clamp(20px,4vw,34px);margin-top:20px}
-.panel-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
-.panel-head h2{margin:0;font-size:1.25rem}.pill{font-size:.75rem;padding:6px 11px;border:1px solid #5cf3e555;border-radius:99px;color:var(--cyan)}
-.progress{height:7px;background:#ffffff12;border-radius:99px;overflow:hidden;margin:14px 0 22px}.progress span{height:100%;display:block;width:0;background:linear-gradient(90deg,var(--pink),var(--cyan));box-shadow:0 0 16px var(--cyan);transition:width .5s}
-.quest-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.quest{padding:18px 14px;text-align:center;border:1px solid var(--line);border-radius:18px;background:#ffffff08;min-height:145px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;transition:.2s}
-.quest:hover{transform:translateY(-4px);border-color:#5cf3e577;background:#ffffff10}.quest .ico{font-size:2rem;filter:drop-shadow(0 0 12px #ff5ca8)}.quest strong{font-size:.92rem}.quest small{color:#a99cbd;font-size:.73rem}.quest.done{border-color:#5cf3e588;background:#5cf3e511}.quest.done:after{content:"✓ باز شد";font-size:.72rem;color:var(--cyan)}
-.game-area{position:relative;border:1px solid #ffffff18;border-radius:22px;background:radial-gradient(circle at 50% 40%,#352456,#11172d 70%);min-height:330px;overflow:hidden;touch-action:manipulation}
-.game-hud{display:flex;justify-content:space-between;gap:12px;color:#d8cde8;font-size:.85rem;margin-bottom:12px}
-#playfield{position:absolute;inset:0;overflow:hidden}.target{position:absolute;border:0;background:transparent;font-size:30px;filter:drop-shadow(0 0 12px #ff6cae);animation:pop .25s both;touch-action:manipulation}
-@keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
-.game-overlay{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:20px;background:#0d1024aa;backdrop-filter:blur(4px);z-index:2}.game-overlay h3{font-size:1.5rem;margin:0 0 8px}.game-overlay p{color:#c0b3d3;line-height:1.8;margin:0 0 15px}
-.memory-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:520px;margin:18px auto}.memory-card{aspect-ratio:1;border-radius:16px;border:1px solid #ffffff24;background:linear-gradient(145deg,#2b2450,#142d43);font-size:1.7rem;box-shadow:inset 0 1px #fff2;transition:.2s}.memory-card.flipped,.memory-card.matched{background:linear-gradient(145deg,#62345f,#145d61);border-color:#5cf3e588}.memory-card.matched{opacity:.6}
-.question{font-size:1.2rem;line-height:1.8;margin:12px 0 20px}.answers{display:grid;grid-template-columns:1fr 1fr;gap:10px}.answer{border:1px solid #ffffff22;border-radius:14px;background:#ffffff09;padding:13px}.answer:hover{border-color:var(--cyan);background:#5cf3e511}.answer.correct{border-color:#5cf3e5;background:#5cf3e522}.answer.wrong{border-color:#ff6b9d;background:#ff6b9d22}
-.final{text-align:center;padding:24px 8px}.final h2{font-size:clamp(2.5rem,8vw,5rem);margin:8px 0;color:#ff8fbe;text-shadow:0 0 35px #ff4b9b88}.final p{line-height:2.2;color:#ded1eb;max-width:600px;margin:12px auto 24px}
-#fx{position:fixed;inset:0;pointer-events:none;z-index:20}
-footer{text-align:center;color:#7e7394;font-size:.75rem;margin-top:24px}
-@media(max-width:650px){.quest-grid{grid-template-columns:1fr}.quest{min-height:105px;flex-direction:row;justify-content:flex-start;text-align:right;padding:15px 18px}.quest .ico{width:45px}.quest small{margin-right:auto}.answers{grid-template-columns:1fr}.game-area{min-height:360px}.topbar{margin-bottom:15px}}
+.aurora{position:fixed;width:40vw;height:40vw;min-width:260px;min-height:260px;border-radius:50%;filter:blur(90px);opacity:.19;pointer-events:none;z-index:-2;animation:aurora 13s ease-in-out infinite alternate}.a1{background:#ff3c9d;left:-13vw;top:16vh}.a2{background:#00e6d4;right:-13vw;bottom:0;animation-delay:-5s}.a3{background:#8b5bff;left:35vw;top:50vh;opacity:.12;animation-delay:-9s}@keyframes aurora{to{transform:translate(7vw,-6vh) scale(1.25)}}
+.scan{position:fixed;inset:0;pointer-events:none;z-index:30;opacity:.07;background:repeating-linear-gradient(0deg,transparent 0 3px,#fff 4px,transparent 5px)}
+button{font:inherit;cursor:pointer;color:inherit}.shell{width:min(1100px,100%);margin:auto;padding:20px 17px 60px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:4px 0 20px}.logo{font-weight:900;letter-spacing:2px;font-size:1rem;text-shadow:0 0 18px #ff5ca8}.logo b{color:var(--cyan)}.status{font-size:.74rem;color:var(--cyan);border:1px solid #5cf3e555;border-radius:99px;padding:7px 11px;background:#5cf3e510}
+.hero,.panel{background:linear-gradient(145deg,rgba(39,25,71,.86),rgba(11,25,48,.82));border:1px solid var(--line);border-radius:28px;box-shadow:0 25px 90px #0008,inset 0 1px #ffffff12;backdrop-filter:blur(18px)}
+.hero{padding:clamp(23px,5vw,56px);text-align:center;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;inset:-2px;background:conic-gradient(from 0deg,transparent,#ff5ca855,transparent,#5cf3e555,transparent);filter:blur(25px);opacity:.45;z-index:-1}
+.eyebrow{color:var(--cyan);font-size:.75rem;letter-spacing:2.5px;font-weight:800}
+h1{font-size:clamp(2.6rem,8vw,5.7rem);line-height:1.18;margin:15px 0 10px;font-weight:900;background:linear-gradient(100deg,#fff 5%,#ff9bd0 42%,#5cf3e5 90%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 24px #f65aa955)}
+.lead{color:var(--muted);line-height:2;max-width:640px;margin:0 auto 20px}
+.hero-emojis{font-size:clamp(1.8rem,5vw,3rem);letter-spacing:10px;filter:drop-shadow(0 0 16px #ff5ca8);margin:18px 0;animation:bob 3s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-8px)}}
+.orbit{width:174px;height:174px;margin:16px auto 22px;position:relative;display:grid;place-items:center}.orbit:before,.orbit:after{content:"";position:absolute;inset:8px;border:1px solid #ff8bc877;border-radius:50%;box-shadow:0 0 25px #ff5ca855,inset 0 0 20px #5cf3e522;animation:spin 12s linear infinite}.orbit:after{inset:24px;border-color:#5cf3e599;transform:rotateX(65deg);animation-duration:8s}@keyframes spin{to{transform:rotate(360deg)}}
+.core{width:92px;height:92px;border-radius:27px;transform:rotate(45deg);background:linear-gradient(135deg,#ff5ca8,#a879ff 55%,#5cf3e5);box-shadow:0 0 35px #ff5ca899,0 0 85px #5cf3e544;display:grid;place-items:center;animation:pulse 2s infinite}.core span{transform:rotate(-45deg);font-size:42px}@keyframes pulse{50%{scale:1.1;box-shadow:0 0 55px #ff5ca8,0 0 110px #5cf3e566}}
+.btn{border:1px solid #ffffff25;border-radius:14px;padding:12px 20px;font-weight:800;transition:.2s;display:inline-flex;align-items:center;justify-content:center;gap:8px}.btn:hover{transform:translateY(-3px);filter:brightness(1.12)}.primary{background:linear-gradient(100deg,#ff4e9c,#9b6cff 55%,#35dcca);box-shadow:0 10px 30px #c4479d44;color:white}.ghost{background:#ffffff0b;color:var(--muted)}.hidden{display:none!important}.screen{animation:enter .5s both}@keyframes enter{from{opacity:0;transform:translateY(14px) scale(.99)}to{opacity:1;transform:none}}
+.panel{padding:clamp(18px,4vw,32px);margin-top:18px}.panel-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:15px}.panel-head h2{margin:0;font-size:1.18rem}.pill{font-size:.72rem;padding:6px 10px;border:1px solid #5cf3e555;border-radius:99px;color:var(--cyan);white-space:nowrap}
+.progress{height:7px;background:#ffffff12;border-radius:99px;overflow:hidden;margin:14px 0 20px}.progress span{height:100%;display:block;width:0;background:linear-gradient(90deg,var(--pink),var(--cyan));box-shadow:0 0 16px var(--cyan);transition:width .5s}
+.nickname{color:#ffabd2;font-weight:800;text-shadow:0 0 15px #ff5ca877}.quest-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.quest{position:relative;padding:16px 12px;text-align:center;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#ffffff0c,#ffffff04);min-height:138px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;transition:.22s;overflow:hidden}.quest:hover{transform:translateY(-4px);border-color:#5cf3e588;background:#ffffff12}.quest .ico{font-size:2rem;filter:drop-shadow(0 0 12px #ff5ca8)}.quest strong{font-size:.9rem}.quest small{color:#a99cbd;font-size:.72rem}.quest.done{border-color:#5cf3e588;background:#5cf3e511}.quest.done:after{content:"✓ مرحله باز شد";font-size:.68rem;color:var(--cyan)}
+.game-area{position:relative;border:1px solid #ffffff18;border-radius:22px;background:radial-gradient(circle at 50% 40%,#352456,#11172d 70%);min-height:340px;overflow:hidden;touch-action:manipulation}.game-hud{display:flex;justify-content:space-between;gap:10px;color:#d8cde8;font-size:.82rem;margin-bottom:12px}.playfield{position:absolute;inset:0;overflow:hidden}.target{position:absolute;border:0;background:transparent;font-size:31px;filter:drop-shadow(0 0 12px #ff6cae);animation:pop .22s both;touch-action:manipulation}@keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
+.game-overlay{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:20px;background:#0d1024b8;backdrop-filter:blur(5px);z-index:2}.game-overlay h3{font-size:1.45rem;margin:0 0 8px}.game-overlay p{color:#c0b3d3;line-height:1.8;margin:0 0 14px}
+.memory-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;max-width:520px;margin:18px auto}.memory-card{aspect-ratio:1;border-radius:15px;border:1px solid #ffffff24;background:linear-gradient(145deg,#2b2450,#142d43);font-size:1.65rem;box-shadow:inset 0 1px #fff2;transition:.2s}.memory-card.flipped,.memory-card.matched{background:linear-gradient(145deg,#62345f,#145d61);border-color:#5cf3e588}.memory-card.matched{opacity:.6}
+.answers{display:grid;grid-template-columns:1fr 1fr;gap:10px}.answer{border:1px solid #ffffff22;border-radius:14px;background:#ffffff09;padding:13px}.answer:hover{border-color:var(--cyan);background:#5cf3e511}.answer.correct{border-color:#5cf3e5;background:#5cf3e522}.answer.wrong{border-color:#ff6b9d;background:#ff6b9d22}
+.final{text-align:center;padding:22px 8px}.final h2{font-size:clamp(2.5rem,8vw,5rem);margin:8px 0;color:#ff8fbe;text-shadow:0 0 35px #ff4b9b88}.final p{line-height:2.2;color:#ded1eb;max-width:620px;margin:12px auto 24px}
+.tap-button{width:150px;height:150px;border-radius:50%;border:2px solid #ffadd5;background:radial-gradient(circle at 35% 30%,#ffb4d8,#a83d9b 55%,#24204e);box-shadow:0 0 25px #ff5ca877,0 0 65px #5cf3e533,inset 0 0 20px #fff4;font-size:3.2rem;user-select:none;touch-action:manipulation}.tap-button:active{transform:scale(.92)}
+.dodge-field{height:300px;position:relative;border:1px solid #ffffff20;border-radius:18px;overflow:hidden;background:radial-gradient(circle at center,#26355b,#11142a)}.dodge-item{position:absolute;border:0;background:transparent;font-size:30px;filter:drop-shadow(0 0 10px #5cf3e5)}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:40}
+footer{text-align:center;color:#7e7394;font-size:.74rem;margin-top:23px}
+@media(max-width:650px){.quest-grid{grid-template-columns:1fr}.quest{min-height:92px;flex-direction:row;justify-content:flex-start;text-align:right;padding:13px 18px}.quest .ico{width:45px}.quest small{margin-right:auto}.answers{grid-template-columns:1fr}.game-area{min-height:360px}.topbar{margin-bottom:14px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
 </head>
-<body><div id="stars"></div><div class="nebula n1"></div><div class="nebula n2"></div><div class="scan"></div><canvas id="fx"></canvas>
+<body><div id="stars"></div><div class="aurora a1"></div><div class="aurora a2"></div><div class="aurora a3"></div><div class="scan"></div><canvas id="fx"></canvas>
 <div class="shell">
 <header class="topbar"><div class="logo">LOVE <b>QUEST</b> ✦</div><div class="status">● PLAYER 01 — HEART MODE</div></header>
-
 <section id="welcome" class="hero screen">
- <div class="eyebrow">A SPECIAL MISSION FOR SOMEONE SPECIAL</div>
+ <div class="eyebrow">A TOP SECRET MISSION FOR MY FAVORITE HUMAN</div>
  <h1>LOVE QUEST</h1>
- <p class="lead">یه مأموریت مخفی برات دارم…<br>سه مرحله رو رد کن، قلب‌ها رو جمع کن و جایزه‌ی آخر رو باز کن. آماده‌ای؟</p>
- <div class="orbit"><div class="core"><span>💗</span></div></div>
+ <p class="lead">سلام <span class="nickname">نزوکو / آنیا فورجر / توت‌فرنگی بابا / قلب علی</span>! 🍓<br>یه مأموریت محرمانه فقط برای تو فعال شده. پنج مرحله‌ی بامزه رو رد کن تا جایزه‌ی نهایی رو بگیری!</p>
+ <div class="hero-emojis">🦋 💗 🍓 🩵 ✨</div><div class="orbit"><div class="core"><span>💖</span></div></div>
  <button class="btn primary" id="start">شروع مأموریت <span>➜</span></button>
- <div class="mini-note">یک ماجراجویی کوچولو، با کلی عشق و افکت ✨</div>
+ <div class="mini-note">WARNING: احتمال لبخند زدن و ذوق‌مرگ شدن بالاست 😌</div>
 </section>
-
 <section id="hub" class="panel hidden screen">
- <div class="panel-head"><h2>نقشه‌ی مأموریت تو</h2><span class="pill" id="scorePill">۰ / ۳ مرحله</span></div>
- <p style="color:var(--muted);line-height:1.9;margin:0">هر مرحله رو کامل کن تا مسیر رسیدن به سورپرایز نهایی باز بشه.</p>
+ <div class="panel-head"><h2>🗺️ نقشه‌ی مأموریت <span class="nickname">قلب علی</span></h2><span class="pill" id="scorePill">۰ / ۵ مرحله</span></div>
+ <p style="color:var(--muted);line-height:1.9;margin:0">هر مرحله رو کامل کن تا پورتال سورپرایز نهایی باز بشه. قهرمان کوچولوی ما، آماده‌ای؟ 🍓</p>
  <div class="progress"><span id="progress"></span></div>
  <div class="quest-grid">
-  <button class="quest" id="q1"><span class="ico">💘</span><strong>شکارچی قلب‌ها</strong><small>۱۵ قلب جمع کن</small></button>
-  <button class="quest" id="q2"><span class="ico">🧠</span><strong>حافظه‌ی عاشق</strong><small>جفت‌های مخفی رو پیدا کن</small></button>
-  <button class="quest" id="q3"><span class="ico">🔐</span><strong>رمز قلب</strong><small>معمای آخر رو حل کن</small></button>
+  <button class="quest" id="q1"><span class="ico">💘</span><strong>شکارچی قلب‌ها</strong><small>۱۵ قلب در ۲۰ ثانیه</small></button>
+  <button class="quest" id="q2"><span class="ico">🧠</span><strong>حافظه‌ی نزوکو</strong><small>۶ جفت کارت مخفی</small></button>
+  <button class="quest" id="q3"><span class="ico">🔐</span><strong>رمز مخفی آنیا</strong><small>دو معمای بانمک</small></button>
+  <button class="quest" id="q4"><span class="ico">⚡</span><strong>ضربان قلب</strong><small>۲۵ ضربه در ۱۲ ثانیه</small></button>
+  <button class="quest" id="q5"><span class="ico">🍓</span><strong>ماموریت توت‌فرنگی</strong><small>۱۰ توت‌فرنگی بگیر، از بمب دوری کن</small></button>
  </div>
 </section>
-
 <section id="game1" class="panel hidden screen">
- <div class="panel-head"><h2>مرحله ۱ — شکارچی قلب‌ها</h2><span class="pill">۱۵ قلب در ۲۰ ثانیه</span></div>
+ <div class="panel-head"><h2>مرحله ۱ — شکارچی قلب‌ها 💘</h2><span class="pill">۱۵ قلب / ۲۰ ثانیه</span></div>
  <div class="game-hud"><span>قلب‌ها: <b id="caught">۰</b> / ۱۵</span><span>زمان: <b id="timer">۲۰</b> ثانیه</span></div>
- <div class="game-area"><div id="playfield"></div><div class="game-overlay" id="gameStart"><div><h3>آماده‌ای؟ 💗</h3><p>روی قلب‌هایی که ظاهر می‌شن سریع ضربه بزن.<br>۱۵ تا قلب جمع کن تا مرحله رو ببری!</p><button class="btn primary" id="play">بزن بریم!</button></div></div><div class="game-overlay hidden" id="gameEnd"><div><h3 id="gameEndTitle">آفرین!</h3><p id="gameEndText"></p><button class="btn primary" id="retry">دوباره تلاش می‌کنم</button><button class="btn ghost" id="toHub1">برگشت به نقشه</button></div></div></div>
+ <div class="game-area"><div id="playfield" class="playfield"></div><div class="game-overlay" id="gameStart"><div><h3>آماده‌ای، توت‌فرنگی؟ 🍓</h3><p>روی قلب‌هایی که ظاهر می‌شن سریع ضربه بزن.<br>۱۵ تا قلب جمع کن تا مرحله رو ببری!</p><button class="btn primary" id="play">بزن بریم!</button></div></div><div class="game-overlay hidden" id="gameEnd"><div><h3 id="gameEndTitle">آفرین!</h3><p id="gameEndText"></p><button class="btn primary" id="retry">دوباره تلاش می‌کنم</button><button class="btn ghost" id="toHub1">برگشت به نقشه</button></div></div></div>
 </section>
-
 <section id="game2" class="panel hidden screen">
- <div class="panel-head"><h2>مرحله ۲ — حافظه‌ی عاشق</h2><span class="pill">۶ جفت مخفی</span></div>
- <p style="color:var(--muted);line-height:1.8;margin-top:0">کارت‌ها رو برگردون و شکل‌های شبیه به هم رو پیدا کن.</p>
- <div class="memory-grid" id="memoryGrid"></div>
- <div style="text-align:center;color:var(--muted);font-size:.85rem">جفت‌های پیدا شده: <b id="pairs">۰</b> / ۶</div>
- <div style="text-align:center;margin-top:18px"><button class="btn ghost" id="toHub2">برگشت به نقشه</button></div>
+ <div class="panel-head"><h2>مرحله ۲ — حافظه‌ی نزوکو 🧠</h2><span class="pill">۶ جفت مخفی</span></div>
+ <p style="color:var(--muted);line-height:1.8;margin-top:0">کارت‌ها رو برگردون و شکل‌های شبیه به هم رو پیدا کن.</p><div class="memory-grid" id="memoryGrid"></div>
+ <div style="text-align:center;color:var(--muted);font-size:.85rem">جفت‌های پیدا شده: <b id="pairs">۰</b> / ۶</div><div style="text-align:center;margin-top:18px"><button class="btn ghost" id="toHub2">برگشت به نقشه</button></div>
 </section>
-
 <section id="game3" class="panel hidden screen">
- <div class="panel-head"><h2>مرحله ۳ — رمز قلب</h2><span class="pill">مرحله نهایی</span></div>
- <div id="quizBox">
-  <div class="eyebrow">FINAL LOVE CHECK</div>
-  <div class="question" id="question">به نظرت قشنگ‌ترین اتفاق دنیا چیه؟</div>
-  <div class="answers" id="answers"></div>
-  <p class="mini-note" id="quizHint">جوابی رو انتخاب کن که به دلت نزدیک‌تره.</p>
- </div>
- <div style="text-align:center;margin-top:18px"><button class="btn ghost" id="toHub3">برگشت به نقشه</button></div>
+ <div class="panel-head"><h2>مرحله ۳ — رمز مخفی آنیا 🔐</h2><span class="pill">۲ معما</span></div><div class="eyebrow">ANYA'S SECRET TEST</div><div class="question" id="question" style="font-size:1.2rem;line-height:1.9;margin:16px 0">به نظرت قشنگ‌ترین اتفاق دنیا چیه؟</div><div class="answers" id="answers"></div><p class="mini-note" id="quizHint">جوابی رو انتخاب کن که به دلت نزدیک‌تره.</p><div style="text-align:center;margin-top:18px"><button class="btn ghost" id="toHub3">برگشت به نقشه</button></div>
 </section>
-
-<section id="ending" class="panel hidden screen">
- <div class="final">
-  <div class="eyebrow">MISSION COMPLETE — REWARD UNLOCKED</div>
-  <div style="font-size:3rem;filter:drop-shadow(0 0 18px #ff5ca8)">💗✨🦋</div>
-  <h2>دوستت دارم!</h2>
-  <p>همه‌ی مرحله‌ها رو رد کردی، ولی جایزه‌ی واقعی این بازی تویی.<br><strong>بودنت یکی از قشنگ‌ترین اتفاق‌های زندگی منه.</strong><br>این همه قلب و نور و بازی فقط یه راه کوچیک بود تا بهت بگم چقدر برام عزیزی.</p>
-  <button class="btn primary" id="celebrate">دوباره جشن بگیریم! 🎉</button>
-  <div class="mini-note" style="margin-top:18px">با تمام عشق، برای تو ♡</div>
- </div>
+<section id="game4" class="panel hidden screen">
+ <div class="panel-head"><h2>مرحله ۴ — ضربان قلب ⚡</h2><span class="pill">۲۵ ضربه / ۱۲ ثانیه</span></div>
+ <p style="color:var(--muted);line-height:1.8">روی قلب بزن و ضربان عشق رو بالا ببر! سریع‌تر از چیزی که فکر می‌کنی 😎</p>
+ <div class="game-hud"><span>ضربه‌ها: <b id="tapCount">۰</b> / ۲۵</span><span>زمان: <b id="tapTime">۱۲</b> ثانیه</span></div>
+ <div style="display:grid;place-items:center;padding:24px"><button class="tap-button" id="tapHeart" aria-label="ضربه به قلب">💗</button></div>
+ <div class="game-overlay hidden" id="tapEnd"><div><h3 id="tapTitle">عالی بود!</h3><p id="tapText"></p><button class="btn primary" id="tapRetry">دوباره تلاش کن</button><button class="btn ghost" id="toHub4">برگشت به نقشه</button></div></div>
+ <div style="text-align:center"><button class="btn primary" id="tapStart">شروع ضربان!</button><button class="btn ghost" id="toHub4b">برگشت به نقشه</button></div>
 </section>
-<footer>DESIGNED WITH ♥ FOR ONE PLAYER ONLY</footer>
+<section id="game5" class="panel hidden screen">
+ <div class="panel-head"><h2>مرحله ۵ — ماموریت توت‌فرنگی 🍓</h2><span class="pill">۱۰ توت‌فرنگی بگیر!</span></div>
+ <div class="game-hud"><span>توت‌فرنگی: <b id="berryCount">۰</b> / ۱۰</span><span>زمان: <b id="berryTime">۱۸</b> ثانیه</span><span>💣 بمب: <b id="bombCount">۰</b> / ۳</span></div>
+ <p style="color:var(--muted);line-height:1.8">توت‌فرنگی‌ها رو بگیر؛ به بمب‌ها دست نزن. سه تا بمب یعنی باخت!</p>
+ <div class="dodge-field" id="dodgeField"></div>
+ <div class="game-overlay" id="berryStart"><div><h3>توت‌فرنگی بابا، آماده‌ای؟ 🍓</h3><p>توت‌فرنگی‌ها رو جمع کن و از بمب‌ها فرار کن!</p><button class="btn primary" id="berryGo">شروع بازی</button></div></div>
+ <div class="game-overlay hidden" id="berryEnd"><div><h3 id="berryTitle"></h3><p id="berryText"></p><button class="btn primary" id="berryRetry">تلاش دوباره</button><button class="btn ghost" id="toHub5">برگشت به نقشه</button></div></div>
+</section>
+<section id="ending" class="panel hidden screen"><div class="final">
+ <div class="eyebrow">ALL MISSIONS COMPLETE — SECRET REWARD UNLOCKED</div><div style="font-size:3.2rem;filter:drop-shadow(0 0 18px #ff5ca8)">💗✨🦋🍓</div>
+ <h2>دوستت دارم!</h2><p>نزوکوی من، آنیای کوچولوی من، توت‌فرنگی بابا…<br>همه‌ی این مرحله‌ها رو رد کردی، ولی جایزه‌ی واقعی این بازی خودِ تویی.<br><strong>قلب علی همیشه یه گوشه‌ش رو برای تو نگه می‌داره.</strong><br>بودنت یکی از قشنگ‌ترین اتفاق‌های زندگی منه. 💞</p>
+ <button class="btn primary" id="celebrate">دوباره جشن بگیریم! 🎉</button><div class="mini-note" style="margin-top:18px">با تمام عشق، برای قلب علی ♡</div>
+ </div></section>
+<footer>BUILT WITH ♥ FOR NEZUKO · ANYA · MY STRAWBERRY</footer>
 </div>
 <script>
-const $=id=>document.getElementById(id);
-let completed=new Set(),caught=0,time=20,clock=null,spawn=null,gameRunning=false,first=null,lock=false,pairs=0;
-const screens=["welcome","hub","game1","game2","game3","ending"];
-function show(id){screens.forEach(s=>$(s).classList.toggle("hidden",s!==id));$(id).classList.add("screen");window.scrollTo({top:0,behavior:"smooth"})}
-function updateHub(){let n=completed.size;$("scorePill").textContent=n+" / ۳ مرحله";$("progress").style.width=(n/3*100)+"%";["q1","q2","q3"].forEach((id,i)=>$(id).classList.toggle("done",completed.has(i+1)));if(n===3)setTimeout(()=>{show("ending");celebrate(220)},500)}
-function done(n){completed.add(n);updateHub();if(n<3)show("hub")}
-$("start").onclick=()=>show("hub");
-$("q1").onclick=()=>{show("game1");resetCatch()};
-$("q2").onclick=()=>{show("game2");if(!$("memoryGrid").dataset.ready)initMemory()};
-$("q3").onclick=()=>{show("game3");renderQuiz()};
-$("toHub1").onclick=$("toHub2").onclick=$("toHub3").onclick=()=>show("hub");
+const $=id=>document.getElementById(id);let completed=new Set();
+const screens=["welcome","hub","game1","game2","game3","game4","game5","ending"];
+function show(id){screens.forEach(s=>$(s).classList.toggle("hidden",s!==id));window.scrollTo({top:0,behavior:"smooth"})}
+function fa(n){return String(n).replace(/\d/g,d=>"۰۱۲۳۴۵۶۷۸۹"[d])}
+function updateHub(){let n=completed.size;$("scorePill").textContent=fa(n)+" / ۵ مرحله";$("progress").style.width=(n/5*100)+"%";for(let i=1;i<=5;i++)$("q"+i).classList.toggle("done",completed.has(i));if(n===5)setTimeout(()=>{show("ending");celebrate(250)},500)}
+function done(n){completed.add(n);updateHub();if(n<5)show("hub")}
+$("start").onclick=()=>show("hub");for(let i=1;i<=5;i++)$("q"+i).onclick=()=>{show("game"+i);if(i===1)resetCatch();if(i===2&&!$("memoryGrid").dataset.ready)initMemory();if(i===3)renderQuiz();if(i===4)resetTap();if(i===5)resetBerry()};
+for(let i=1;i<=5;i++){let ids=["toHub"+i,"toHub"+i+"b"];ids.forEach(id=>{if($(id))$(id).onclick=()=>show("hub")})}
+let caught=0,time=20,clock=null,spawn=null,gameRunning=false;
 function resetCatch(){clearInterval(clock);clearInterval(spawn);caught=0;time=20;gameRunning=false;$("caught").textContent="۰";$("timer").textContent="۲۰";$("playfield").innerHTML="";$("gameStart").classList.remove("hidden");$("gameEnd").classList.add("hidden")}
-function startCatch(){caught=0;time=20;gameRunning=true;$("caught").textContent="۰";$("timer").textContent="۲۰";$("gameStart").classList.add("hidden");$("gameEnd").classList.add("hidden");$("playfield").innerHTML="";spawn=setInterval(makeHeart,550);clock=setInterval(()=>{time--;$("timer").textContent=String(time).replace(/\d/g,d=>"۰۱۲۳۴۵۶۷۸۹"[d]);if(time<=0)endCatch(false)},1000)}
-function makeHeart(){if(!gameRunning)return;let b=document.createElement("button");b.className="target";b.textContent=["💗","💖","🩵","💘"][Math.random()*4|0];b.style.left=(4+Math.random()*86)+"%";b.style.top=(8+Math.random()*72)+"%";b.onclick=()=>{if(!gameRunning)return;caught++;$("caught").textContent=String(caught).replace(/\d/g,d=>"۰۱۲۳۴۵۶۷۸۹"[d]);b.remove();if(caught>=15)endCatch(true)};$("playfield").append(b);setTimeout(()=>b.remove(),1300)}
-function endCatch(win){if(!gameRunning)return;gameRunning=false;clearInterval(clock);clearInterval(spawn);$("gameEnd").classList.remove("hidden");$("gameEndTitle").textContent=win?"مرحله رو ترکوندی! ✨":"یه بار دیگه امتحان کن!";$("gameEndText").textContent=win?"۱۵ قلب جمع کردی؛ این مرحله مال توئه.":"این بار "+caught+" قلب جمع کردی. دوباره تلاش کن تا ۱۵ تا کامل بشه.";if(win){$("retry").textContent="ادامه مأموریت";$("retry").onclick=()=>done(1)}else{$("retry").textContent="تلاش دوباره";$("retry").onclick=resetCatch}}
+function startCatch(){caught=0;time=20;gameRunning=true;$("caught").textContent="۰";$("timer").textContent="۲۰";$("gameStart").classList.add("hidden");$("gameEnd").classList.add("hidden");$("playfield").innerHTML="";spawn=setInterval(makeHeart,520);clock=setInterval(()=>{time--;$("timer").textContent=fa(time);if(time<=0)endCatch(false)},1000)}
+function makeHeart(){if(!gameRunning)return;let b=document.createElement("button");b.className="target";b.textContent=["💗","💖","🩵","💘"][Math.random()*4|0];b.style.left=(4+Math.random()*86)+"%";b.style.top=(8+Math.random()*72)+"%";b.onclick=()=>{if(!gameRunning)return;caught++;$("caught").textContent=fa(caught);b.remove();if(caught>=15)endCatch(true)};$("playfield").append(b);setTimeout(()=>b.remove(),1350)}
+function endCatch(win){if(!gameRunning)return;gameRunning=false;clearInterval(clock);clearInterval(spawn);$("gameEnd").classList.remove("hidden");$("gameEndTitle").textContent=win?"مرحله رو ترکوندی! ✨":"یه بار دیگه امتحان کن!";$("gameEndText").textContent=win?"۱۵ قلب جمع کردی؛ این مرحله مال توئه.":"این بار "+fa(caught)+" قلب جمع کردی. دوباره تلاش کن تا ۱۵ تا کامل بشه.";$("retry").textContent=win?"ادامه مأموریت":"تلاش دوباره";$("retry").onclick=win?()=>done(1):resetCatch}
 $("play").onclick=startCatch;
-function initMemory(){let vals=["💗","🩵","🌸","🦋","⭐","💎","💗","🩵","🌸","🦋","⭐","💎"].sort(()=>Math.random()-.5);$("memoryGrid").innerHTML="";$("memoryGrid").dataset.ready="1";pairs=0;first=null;lock=false;$("pairs").textContent="۰";vals.forEach((v,i)=>{let b=document.createElement("button");b.className="memory-card";b.dataset.value=v;b.dataset.index=i;b.textContent="✦";b.onclick=()=>flip(b);$("memoryGrid").append(b)})}
-function flip(b){if(lock||b.classList.contains("flipped")||b.classList.contains("matched"))return;b.classList.add("flipped");b.textContent=b.dataset.value;if(!first){first=b;return}if(first.dataset.value===b.dataset.value){first.classList.add("matched");b.classList.add("matched");first=null;pairs++;$("pairs").textContent=String(pairs).replace(/\d/g,d=>"۰۱۲۳۴۵۶۷۸۹"[d]);if(pairs===6)setTimeout(()=>done(2),650)}else{lock=true;let old=first;first=null;setTimeout(()=>{old.classList.remove("flipped");b.classList.remove("flipped");old.textContent=b.textContent="✦";lock=false},750)}}
-const quiz=[{q:"اگه قرار باشه یه چیز رو همیشه نگه دارم، کدومه؟",a:["لبخندت 😊","همه‌ی لحظه‌های با تو 💗","شکلات 🍫","همه‌شون!"],correct:3},{q:"رمز مخفی این مأموریت چیه؟",a:["دوستت دارم","تو خاصی","قلب من","هر سه جواب 💞"],correct:3}];let qi=0;
+let first=null,lock=false,pairs=0;
+function initMemory(){let vals=["💗","🩵","🌸","🦋","⭐","🍓","💗","🩵","🌸","🦋","⭐","🍓"].sort(()=>Math.random()-.5);$("memoryGrid").innerHTML="";$("memoryGrid").dataset.ready="1";pairs=0;first=null;lock=false;$("pairs").textContent="۰";vals.forEach((v,i)=>{let b=document.createElement("button");b.className="memory-card";b.dataset.value=v;b.textContent="✦";b.onclick=()=>flip(b);$("memoryGrid").append(b)})}
+function flip(b){if(lock||b.classList.contains("flipped")||b.classList.contains("matched"))return;b.classList.add("flipped");b.textContent=b.dataset.value;if(!first){first=b;return}if(first.dataset.value===b.dataset.value){first.classList.add("matched");b.classList.add("matched");first=null;pairs++;$("pairs").textContent=fa(pairs);if(pairs===6)setTimeout(()=>done(2),650)}else{lock=true;let old=first;first=null;setTimeout(()=>{old.classList.remove("flipped");b.classList.remove("flipped");old.textContent=b.textContent="✦";lock=false},700)}}
+const quiz=[{q:"اگه قرار باشه یه چیز رو همیشه نگه دارم، کدومه؟",a:["لبخندت 😊","همه‌ی لحظه‌های با تو 💗","همبرگر 🍔","همه‌شون!"],correct:3},{q:"رمز مخفی این مأموریت چیه؟",a:["دوستت دارم","تو خاصی","قلب من","هر سه جواب 💞"],correct:3}];let qi=0;
 function renderQuiz(){qi=0;showQuestion()}
-function showQuestion(){$("question").textContent=quiz[qi].q;$("answers").innerHTML="";quiz[qi].a.forEach((v,i)=>{let b=document.createElement("button");b.className="answer";b.textContent=v;b.onclick=()=>{if(i===quiz[qi].correct){b.classList.add("correct");$("quizHint").textContent="آفرین! جواب درست همینه 💗";setTimeout(()=>{if(qi===0){qi++;showQuestion()}else done(3)},650)}else{b.classList.add("wrong");$("quizHint").textContent="نزدیک بود! یه گزینه‌ی دیگه رو امتحان کن 😉"}};$("answers").append(b)})}
+function showQuestion(){$("question").textContent=quiz[qi].q;$("answers").innerHTML="";quiz[qi].a.forEach((v,i)=>{let b=document.createElement("button");b.className="answer";b.textContent=v;b.onclick=()=>{if(i===quiz[qi].correct){b.classList.add("correct");$("quizHint").textContent="آفرین! جواب درست همینه 💗";setTimeout(()=>{if(qi===0){qi++;showQuestion()}else done(3)},600)}else{b.classList.add("wrong");$("quizHint").textContent="نزدیک بود! یه گزینه‌ی دیگه رو امتحان کن 😉"}};$("answers").append(b)})}
+let tapCount=0,tapTime=12,tapClock=null,tapOn=false;
+function resetTap(){clearInterval(tapClock);tapOn=false;tapCount=0;tapTime=12;$("tapCount").textContent="۰";$("tapTime").textContent="۱۲";$("tapEnd").classList.add("hidden");$("tapStart").classList.remove("hidden");$("tapHeart").disabled=true}
+function startTap(){tapOn=true;tapCount=0;tapTime=12;$("tapCount").textContent="۰";$("tapTime").textContent="۱۲";$("tapEnd").classList.add("hidden");$("tapStart").classList.add("hidden");$("tapHeart").disabled=false;tapClock=setInterval(()=>{tapTime--;$("tapTime").textContent=fa(tapTime);if(tapTime<=0)endTap(false)},1000)}
+function endTap(win){if(!tapOn)return;tapOn=false;clearInterval(tapClock);$("tapHeart").disabled=true;$("tapEnd").classList.remove("hidden");$("tapTitle").textContent=win?"قلبت از سرعت نور رد شد! ⚡":"یه بار دیگه با قدرت بیشتر!";$("tapText").textContent=win?"۲۵ ضربه ثبت شد؛ قهرمان مرحله‌ای!":"تو "+fa(tapCount)+" ضربه زدی. هدف ۲۵ تاست.";$("tapRetry").textContent=win?"ادامه مأموریت":"تلاش دوباره";$("tapRetry").onclick=win?()=>done(4):resetTap}
+$("tapStart").onclick=startTap;$("tapHeart").onclick=()=>{if(!tapOn)return;tapCount++;$("tapCount").textContent=fa(tapCount);if(tapCount>=25)endTap(true)};
+let berry=0,bombs=0,berryTime=18,berryClock=null,berrySpawn=null,berryOn=false;
+function resetBerry(){clearInterval(berryClock);clearInterval(berrySpawn);berryOn=false;berry=0;bombs=0;berryTime=18;$("berryCount").textContent="۰";$("bombCount").textContent="۰";$("berryTime").textContent="۱۸";$("dodgeField").innerHTML="";$("berryStart").classList.remove("hidden");$("berryEnd").classList.add("hidden")}
+function startBerry(){berryOn=true;berry=0;bombs=0;berryTime=18;$("berryCount").textContent="۰";$("bombCount").textContent="۰";$("berryTime").textContent="۱۸";$("berryStart").classList.add("hidden");$("berryEnd").classList.add("hidden");$("dodgeField").innerHTML="";berrySpawn=setInterval(spawnBerry,650);berryClock=setInterval(()=>{berryTime--;$("berryTime").textContent=fa(berryTime);if(berryTime<=0)endBerry(false)},1000)}
+function spawnBerry(){if(!berryOn)return;let isBomb=Math.random()<.27,e=document.createElement("button");e.className="dodge-item";e.textContent=isBomb?"💣":"🍓";e.style.left=(4+Math.random()*88)+"%";e.style.top=(5+Math.random()*78)+"%";e.onclick=()=>{if(!berryOn)return;e.remove();if(isBomb){bombs++;$("bombCount").textContent=fa(bombs);if(bombs>=3)endBerry(false)}else{berry++;$("berryCount").textContent=fa(berry);if(berry>=10)endBerry(true)}};$("dodgeField").append(e);setTimeout(()=>e.remove(),1450)}
+function endBerry(win){if(!berryOn)return;berryOn=false;clearInterval(berryClock);clearInterval(berrySpawn);$("berryEnd").classList.remove("hidden");$("berryTitle").textContent=win?"توت‌فرنگی‌ها نجات پیدا کردن! 🍓":"اوه اوه! دوباره تلاش کن";$("berryText").textContent=win?"۱۰ توت‌فرنگی جمع کردی؛ این مرحله هم مال توئه!":"توت‌فرنگی: "+fa(berry)+" | بمب: "+fa(bombs)+" — دوباره امتحان کن.";$("berryRetry").textContent=win?"ادامه مأموریت":"تلاش دوباره";$("berryRetry").onclick=win?()=>done(5):resetBerry}
+$("berryGo").onclick=startBerry;
 const canvas=$("fx"),ctx=canvas.getContext("2d");let bits=[],raf;
 function fit(){canvas.width=innerWidth*devicePixelRatio;canvas.height=innerHeight*devicePixelRatio;ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0)}addEventListener("resize",fit);fit();
-function celebrate(n=140){let colors=["#ff5ca8","#ff9bd0","#5cf3e5","#70baff","#a98aff","#fff1a8"];for(let i=0;i<n;i++)bits.push({x:innerWidth/2+(Math.random()-.5)*innerWidth*.8,y:innerHeight*.45,vx:(Math.random()-.5)*10,vy:-3-Math.random()*11,g:.13+Math.random()*.13,s:3+Math.random()*7,r:Math.random()*6,c:colors[Math.random()*colors.length|0],life:120+Math.random()*70});if(!raf)draw()}
+function celebrate(n=150){let colors=["#ff5ca8","#ff9bd0","#5cf3e5","#70baff","#a98aff","#fff1a8"];for(let i=0;i<n;i++)bits.push({x:innerWidth/2+(Math.random()-.5)*innerWidth*.8,y:innerHeight*.45,vx:(Math.random()-.5)*10,vy:-3-Math.random()*11,g:.13+Math.random()*.13,s:3+Math.random()*7,r:Math.random()*6,c:colors[Math.random()*colors.length|0],life:130+Math.random()*70});if(!raf)draw()}
 function draw(){ctx.clearRect(0,0,innerWidth,innerHeight);bits=bits.filter(p=>p.life-->0&&p.y<innerHeight+30);for(let p of bits){p.x+=p.vx;p.y+=p.vy;p.vy+=p.g;p.vx*=.993;p.r+=.08;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.r);ctx.fillStyle=p.c;ctx.shadowBlur=12;ctx.shadowColor=p.c;ctx.fillRect(-p.s/2,-p.s/2,p.s,p.s*1.5);ctx.restore()}if(bits.length)raf=requestAnimationFrame(draw);else{cancelAnimationFrame(raf);raf=null}}
-$("celebrate").onclick=()=>celebrate(260);
+$("celebrate").onclick=()=>celebrate(300);
 </script></body></html>
